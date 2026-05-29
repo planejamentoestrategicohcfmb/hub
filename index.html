@@ -194,6 +194,31 @@
     .cta .arrow { transition: transform .2s; }
     .tile:hover .cta .arrow { transform: translateX(5px); }
 
+    /* ===== Card "em breve" ===== */
+    .tile.soon {
+      cursor: default;
+      background: linear-gradient(160deg, rgba(255,255,255,.045), rgba(255,255,255,.015));
+      border-style: dashed; border-color: rgba(255,255,255,.16);
+      box-shadow: none;
+    }
+    .tile.soon:hover { transform: none; box-shadow: none; border-color: rgba(255,255,255,.16); }
+    .tile.soon::before, .tile.soon::after { display: none; }
+    .tile.soon .ic {
+      background: linear-gradient(135deg, #2a4742, #1d332f);
+      box-shadow: none; filter: grayscale(.3); opacity: .85;
+    }
+    .tile.soon h3, .tile.soon .kicker { color: var(--muted); }
+    .tile.soon p { opacity: .85; }
+    .badge-soon {
+      position: relative; z-index: 1;
+      display: inline-flex; align-items: center; gap: 9px;
+      padding: 12px 22px; border-radius: 14px;
+      font-size: 14px; font-weight: 700; letter-spacing: .3px;
+      color: var(--muted);
+      background: rgba(255,255,255,.06); border: 1px solid var(--glass-brd);
+    }
+    .badge-soon .pip { width: 7px; height: 7px; border-radius: 50%; background: var(--muted); }
+
     footer {
       position: relative; z-index: 2;
       text-align: center; padding: 26px 20px 34px;
@@ -227,7 +252,7 @@
 
     <h1>HUB Planejamento Estratégico</h1>
 
-    <div class="deck single">
+    <div class="deck">
       <a class="tile" href="https://script.google.com/macros/s/AKfycbybPKqKdXcgRr1sM6lBOmFazwuIDXh5vvXX6dNOxvCJdbO9bJPHRsABrEo7SzgsHquYMg/exec" target="_blank" rel="noopener">
         <div class="top">
           <div class="ic">📋</div>
@@ -239,6 +264,18 @@
         <p>Registre o huddle diário e explore os KPIs consolidados — com filtro de período, rankings de aderência e indicadores de cancelamento cirúrgico.</p>
         <span class="cta">Entrar no painel <span class="arrow">→</span></span>
       </a>
+
+      <div class="tile soon">
+        <div class="top">
+          <div class="ic">🏛️</div>
+          <div>
+            <div class="kicker">Escritório de Excelência</div>
+            <h3>Huddle Escritório de Excelência</h3>
+          </div>
+        </div>
+        <p>Painel de acompanhamento do escritório de excelência. Em desenvolvimento — disponível em breve.</p>
+        <span class="badge-soon"><span class="pip"></span> Em breve</span>
+      </div>
     </div>
   </main>
 </body>
